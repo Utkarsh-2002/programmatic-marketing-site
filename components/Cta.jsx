@@ -22,7 +22,7 @@ export default function Cta({ data }) {
           <div className="reel-track">
             {[...data.reel, ...data.reel].map((r, i) => (
               <div key={i} className="frame reel-card">
-                <Media tone={r.tone} className="reel-media">
+                <Media tone={r.tone} src={r.src} className="reel-media">
                   <span className="reel-metric">
                     <Icon name={r.icon} size={14} />
                     {r.value}
