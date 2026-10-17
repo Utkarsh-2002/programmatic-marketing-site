@@ -17,7 +17,7 @@ export default function Nav({ brand, links }) {
     <header className={`nav ${scrolled ? "is-scrolled" : ""}`}>
       <div className="nav-blur" aria-hidden="true" />
       <div className="container nav-inner">
-        <a href="#top" aria-label={`${brand} home`} className="nav-logo">
+        <a href="/" aria-label={`${brand} home`} className="nav-logo">
           <Logo name={brand} size={28} textSize={24} />
         </a>
         <nav className="nav-links" aria-label="Main">
@@ -27,7 +27,7 @@ export default function Nav({ brand, links }) {
             </a>
           ))}
         </nav>
-        <a href="#contact" className="btn btn-primary btn-sm">
+        <a href="/contact/" className="btn btn-primary btn-sm">
           <span>Book a call</span>
         </a>
       </div>

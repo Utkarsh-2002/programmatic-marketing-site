@@ -64,7 +64,7 @@ export default function Results({ data }) {
                     </span>
                   ))}
                 </div>
-                <a href="#contact" className="link-u" tabIndex={i === active ? 0 : -1}>
+                <a href={c.href || "/results/"} className="link-u" tabIndex={i === active ? 0 : -1}>
                   {data.linkLabel}
                   <Icon name="arrow" size={12} />
                 </a>

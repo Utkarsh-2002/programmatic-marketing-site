@@ -5,11 +5,17 @@ import "@fontsource/dm-sans/400.css";
 import "@fontsource/dm-sans/600.css";
 import "./globals.css";
 import { brand } from "../lib/content";
+import { organizationSchema, websiteSchema } from "../lib/schema";
+import JsonLd from "../components/JsonLd";
 
 export const metadata = {
-  title: `${brand.name} | Programmatic Advertising Agency`,
+  metadataBase: new URL("https://dotstory.io"),
+  title: {
+    default: `${brand.name} — Organic & Paid Growth for B2B Tech Companies`,
+    template: `%s | ${brand.name}`,
+  },
   description:
-    "We set up and run DV360 programmatic campaigns end to end, so every impression works harder.",
+    "We build organic and paid growth for tech companies above $10M ARR — brand, SEO/AEO/GEO, programmatic and paid media, planned and run end to end.",
 };
 
 export const viewport = {
@@ -24,6 +30,7 @@ export default function RootLayout({ children }) {
         <noscript>
           <style>{`.reveal{opacity:1!important;transform:none!important;filter:none!important}`}</style>
         </noscript>
+        <JsonLd data={[organizationSchema(), websiteSchema()]} />
       </head>
       <body>{children}</body>
     </html>
